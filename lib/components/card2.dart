@@ -15,7 +15,7 @@ class Card2 extends StatelessWidget {
         ),
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/mag5.png'),
+            image: AssetImage('assets/magazine_pics/mag2.png'),
             fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.all(
@@ -27,7 +27,7 @@ class Card2 extends StatelessWidget {
             const AuthorCard(
               authorName: 'Oscar Almgren',
               title: 'Smoothie lover 🧉',
-              imageProvider: AssetImage('assets/author_katz.jpeg'),
+              imageProvider: AssetImage('assets/profile_pics/person_katz.jpeg'),
             ),
             Expanded(
               child: Stack(
