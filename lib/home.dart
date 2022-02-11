@@ -1,3 +1,4 @@
+import 'package:apprentice_flutter/card1.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -11,9 +12,7 @@ class _HomeState extends State<Home> {
   int _selectedNavigationIndex = 0;
 
   static List<Widget> pages = <Widget>[
-    Container(
-      color: Colors.amber,
-    ),
+    const Card1(),
     Container(
       color: Colors.deepPurple,
     ),
