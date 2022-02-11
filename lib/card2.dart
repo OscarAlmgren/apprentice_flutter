@@ -1,3 +1,4 @@
+import 'package:apprentice_flutter/author_card.dart';
 import 'package:flutter/material.dart';
 
 class Card2 extends StatelessWidget {
@@ -21,7 +22,13 @@ class Card2 extends StatelessWidget {
           ),
         ),
         child: Column(
-          children: const [],
+          children: const [
+            AuthorCard(
+              authorName: 'Oscar Almgren',
+              title: 'Smoothie lover 🧉',
+              imageProvider: AssetImage('assets/author_katz.jpeg'),
+            )
+          ],
         ),
       ),
     );
