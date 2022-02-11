@@ -8,6 +8,26 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  int _selectedNavigationIndex = 0;
+
+  static List<Widget> pages = <Widget>[
+    Container(
+      color: Colors.amber,
+    ),
+    Container(
+      color: Colors.deepPurple,
+    ),
+    Container(
+      color: Colors.teal,
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedNavigationIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -18,13 +38,10 @@ class _HomeState extends State<Home> {
             style: Theme.of(context).textTheme.headline6,
           ),
         ),
-        body: Center(
-          child: Text(
-            'Let\' get cooking 👨‍🍳',
-            style: Theme.of(context).textTheme.headline1,
-          ),
-        ),
+        body: pages[_selectedNavigationIndex],
         bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedNavigationIndex,
+          onTap: _onItemTapped,
           selectedItemColor:
               Theme.of(context).textSelectionTheme.selectionColor,
           items: const <BottomNavigationBarItem>[
