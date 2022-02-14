@@ -41,16 +41,16 @@ class _HomeState extends State<Home> {
               Theme.of(context).textSelectionTheme.selectionColor,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.card_giftcard),
-              label: 'Card',
+              icon: Icon(Icons.explore),
+              label: 'Explore',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.card_giftcard),
-              label: 'Card2',
+              icon: Icon(Icons.book),
+              label: 'Recipes',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.card_giftcard),
-              label: 'Card3',
+              icon: Icon(Icons.checklist),
+              label: 'To Buy',
             ),
           ],
         ),
