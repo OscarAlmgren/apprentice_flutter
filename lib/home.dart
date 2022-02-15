@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'components/components.dart';
+import 'screens/explore_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -12,9 +13,13 @@ class _HomeState extends State<Home> {
   int _selectedNavigationIndex = 0;
 
   static List<Widget> pages = <Widget>[
-    const Card1(),
-    const Card2(),
-    const Card3(),
+    ExploreScreen(),
+    Container(
+      color: Colors.teal,
+    ),
+    Container(
+      color: Colors.cyan,
+    ),
   ];
 
   void _onItemTapped(int index) {
