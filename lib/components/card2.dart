@@ -1,16 +1,21 @@
+import 'package:apprentice_flutter/models/models.dart';
 import 'package:flutter/material.dart';
 import '../fooderlich_theme.dart';
 import 'author_card.dart';
 
 class Card2 extends StatelessWidget {
-  const Card2({Key? key}) : super(key: key);
+  final ExploreRecipe recipe;
+  const Card2({
+    Key? key,
+    required this.recipe,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
         constraints: const BoxConstraints.expand(
-          width: 350,
+          width: 263,
           height: 450,
         ),
         decoration: const BoxDecoration(

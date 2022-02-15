@@ -1,8 +1,10 @@
 import 'package:apprentice_flutter/fooderlich_theme.dart';
+import 'package:apprentice_flutter/models/models.dart';
 import 'package:flutter/material.dart';
 
 class Card3 extends StatelessWidget {
-  const Card3({Key? key}) : super(key: key);
+  final ExploreRecipe recipe;
+  const Card3({Key? key, required this.recipe}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
