@@ -1,5 +1,5 @@
+import 'screens/recipes_screen.dart';
 import 'package:flutter/material.dart';
-import 'components/components.dart';
 import 'screens/explore_screen.dart';
 
 class Home extends StatefulWidget {
@@ -14,9 +14,7 @@ class _HomeState extends State<Home> {
 
   static List<Widget> pages = <Widget>[
     ExploreScreen(),
-    Container(
-      color: Colors.teal,
-    ),
+    RecipesScreen(),
     Container(
       color: Colors.cyan,
     ),
@@ -35,7 +33,7 @@ class _HomeState extends State<Home> {
         appBar: AppBar(
           title: Text(
             'Fooderlich home.dart',
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.headline4,
           ),
         ),
         body: pages[_selectedNavigationIndex],
