@@ -1,8 +1,7 @@
 import 'package:apprentice_flutter/api/mock_fooderlich_service.dart';
-import 'package:apprentice_flutter/components/friend_post_list_view.dart';
-import 'package:apprentice_flutter/components/today_recipe_list_view.dart';
 import 'package:flutter/material.dart';
 
+import '../components/components.dart';
 import '../models/models.dart';
 
 class ExploreScreen extends StatelessWidget {

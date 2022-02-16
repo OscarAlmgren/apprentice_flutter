@@ -1,4 +1,4 @@
-import 'package:apprentice_flutter/models/models.dart';
+import '../models/models.dart';
 import 'package:flutter/material.dart';
 
 import 'components.dart';
@@ -45,7 +45,7 @@ class TodayRecipeListView extends StatelessWidget {
               itemCount: recipes.length,
               scrollDirection: Axis.horizontal,
               primary: true,
-              physics: const AlwaysScrollableScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               shrinkWrap: true,
             ),
           ),

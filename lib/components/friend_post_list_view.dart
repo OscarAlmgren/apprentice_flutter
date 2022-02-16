@@ -1,4 +1,4 @@
-import 'package:apprentice_flutter/components/components.dart';
+import 'components.dart';
 import 'package:flutter/material.dart';
 
 import '../models/models.dart';
