@@ -3,57 +3,67 @@ import 'package:google_fonts/google_fonts.dart';
 
 class FooderlichTheme {
   static TextTheme lightTextTheme = TextTheme(
-    bodyText1: GoogleFonts.openSans(
+    bodyText1: GoogleFonts.robotoMono(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
       color: Colors.black,
     ),
-    headline1: GoogleFonts.openSans(
+    headline1: GoogleFonts.robotoMono(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
       color: Colors.black,
     ),
-    headline2: GoogleFonts.openSans(
+    headline2: GoogleFonts.robotoMono(
       fontSize: 21.0,
       fontWeight: FontWeight.w700,
       color: Colors.black,
     ),
-    headline3: GoogleFonts.openSans(
+    headline3: GoogleFonts.robotoMono(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
       color: Colors.black,
     ),
-    headline6: GoogleFonts.openSans(
+    headline6: GoogleFonts.robotoMono(
       fontSize: 20.0,
       fontWeight: FontWeight.w600,
       color: Colors.black,
+    ),
+    headline4: GoogleFonts.robotoMono(
+      fontSize: 24.0,
+      fontWeight: FontWeight.bold,
+      color: Colors.white,
     ),
   );
 
   static TextTheme darkTextTheme = TextTheme(
-    bodyText1: GoogleFonts.openSans(
+    bodyText1: GoogleFonts.robotoMono(
       fontSize: 14.0,
       fontWeight: FontWeight.w700,
       color: Colors.white,
     ),
-    headline1: GoogleFonts.openSans(
+    headline1: GoogleFonts.robotoMono(
       fontSize: 32.0,
       fontWeight: FontWeight.bold,
       color: Colors.white,
     ),
-    headline2: GoogleFonts.openSans(
+    headline2: GoogleFonts.robotoMono(
       fontSize: 21.0,
       fontWeight: FontWeight.w700,
       color: Colors.white,
     ),
-    headline3: GoogleFonts.openSans(
+    headline3: GoogleFonts.robotoMono(
       fontSize: 16.0,
       fontWeight: FontWeight.w600,
       color: Colors.white,
     ),
-    headline6: GoogleFonts.openSans(
+    headline6: GoogleFonts.robotoMono(
       fontSize: 20.0,
       fontWeight: FontWeight.w600,
+      color: Colors.white,
+    ),
+    headline4: GoogleFonts.robotoMono(
+      fontSize: 24.0,
+      fontWeight: FontWeight.bold,
       color: Colors.white,
     ),
   );
@@ -69,12 +79,12 @@ class FooderlichTheme {
         ),
       ),
       appBarTheme: const AppBarTheme(
-        foregroundColor: Colors.black,
-        backgroundColor: Colors.white,
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.brown,
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         foregroundColor: Colors.white,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.brown,
       ),
       bottomNavigationBarTheme: const BottomNavigationBarThemeData(
         selectedItemColor: Colors.green,
