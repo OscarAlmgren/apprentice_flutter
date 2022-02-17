@@ -3,67 +3,163 @@ import 'package:google_fonts/google_fonts.dart';
 
 class FooderlichTheme {
   static TextTheme lightTextTheme = TextTheme(
-    bodyText1: GoogleFonts.robotoMono(
-      fontSize: 14.0,
-      fontWeight: FontWeight.w700,
+    headline1: GoogleFonts.shrikhand(
+      fontSize: 94.0,
+      fontWeight: FontWeight.w300,
+      letterSpacing: -1.5,
       color: Colors.black,
     ),
-    headline1: GoogleFonts.robotoMono(
-      fontSize: 32.0,
-      fontWeight: FontWeight.bold,
+    headline2: GoogleFonts.shrikhand(
+      fontSize: 58.0,
+      fontWeight: FontWeight.w300,
+      letterSpacing: -0.5,
       color: Colors.black,
     ),
-    headline2: GoogleFonts.robotoMono(
-      fontSize: 21.0,
-      fontWeight: FontWeight.w700,
+    headline3: GoogleFonts.shrikhand(
+      fontSize: 46.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0,
       color: Colors.black,
     ),
-    headline3: GoogleFonts.robotoMono(
-      fontSize: 16.0,
-      fontWeight: FontWeight.w600,
+    headline4: GoogleFonts.robotoCondensed(
+      fontSize: 34.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.25,
       color: Colors.black,
     ),
-    headline6: GoogleFonts.robotoMono(
-      fontSize: 20.0,
-      fontWeight: FontWeight.w600,
+    headline5: GoogleFonts.robotoCondensed(
+      fontSize: 10.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0,
       color: Colors.black,
     ),
-    headline4: GoogleFonts.robotoMono(
+    headline6: GoogleFonts.robotoCondensed(
       fontSize: 24.0,
-      fontWeight: FontWeight.bold,
-      color: Colors.white,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0,
+      color: Colors.black,
+    ),
+    subtitle1: GoogleFonts.openSans(
+      fontSize: 16.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.15,
+      color: Colors.black,
+    ),
+    subtitle2: GoogleFonts.openSans(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w500,
+      letterSpacing: 0.1,
+      color: Colors.black,
+    ),
+    bodyText1: GoogleFonts.roboto(
+      fontSize: 16.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.5,
+      color: Colors.black,
+    ),
+    bodyText2: GoogleFonts.roboto(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.25,
+      color: Colors.black,
+    ),
+    button: GoogleFonts.roboto(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w500,
+      letterSpacing: 1.25,
+      color: Colors.black,
+    ),
+    caption: GoogleFonts.roboto(
+      fontSize: 12.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.4,
+      color: Colors.black,
+    ),
+    overline: GoogleFonts.roboto(
+      fontSize: 10.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 1.5,
+      color: Colors.black,
     ),
   );
 
   static TextTheme darkTextTheme = TextTheme(
-    bodyText1: GoogleFonts.robotoMono(
-      fontSize: 14.0,
-      fontWeight: FontWeight.w700,
+    headline1: GoogleFonts.shrikhand(
+      fontSize: 94.0,
+      fontWeight: FontWeight.w300,
+      letterSpacing: -1.5,
       color: Colors.white,
     ),
-    headline1: GoogleFonts.robotoMono(
-      fontSize: 32.0,
-      fontWeight: FontWeight.bold,
+    headline2: GoogleFonts.shrikhand(
+      fontSize: 58.0,
+      fontWeight: FontWeight.w300,
+      letterSpacing: -0.5,
       color: Colors.white,
     ),
-    headline2: GoogleFonts.robotoMono(
-      fontSize: 21.0,
-      fontWeight: FontWeight.w700,
+    headline3: GoogleFonts.shrikhand(
+      fontSize: 46.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0,
       color: Colors.white,
     ),
-    headline3: GoogleFonts.robotoMono(
-      fontSize: 16.0,
-      fontWeight: FontWeight.w600,
+    headline4: GoogleFonts.robotoCondensed(
+      fontSize: 34.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.25,
       color: Colors.white,
     ),
-    headline6: GoogleFonts.robotoMono(
-      fontSize: 20.0,
-      fontWeight: FontWeight.w600,
+    headline5: GoogleFonts.robotoCondensed(
+      fontSize: 10.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0,
       color: Colors.white,
     ),
-    headline4: GoogleFonts.robotoMono(
+    headline6: GoogleFonts.robotoCondensed(
       fontSize: 24.0,
-      fontWeight: FontWeight.bold,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0,
+      color: Colors.white,
+    ),
+    subtitle1: GoogleFonts.openSans(
+      fontSize: 16.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.15,
+      color: Colors.white,
+    ),
+    subtitle2: GoogleFonts.openSans(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w500,
+      letterSpacing: 0.1,
+      color: Colors.white,
+    ),
+    bodyText1: GoogleFonts.roboto(
+      fontSize: 16.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.5,
+      color: Colors.white,
+    ),
+    bodyText2: GoogleFonts.roboto(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.25,
+      color: Colors.white,
+    ),
+    button: GoogleFonts.roboto(
+      fontSize: 14.0,
+      fontWeight: FontWeight.w500,
+      letterSpacing: 1.25,
+      color: Colors.white,
+    ),
+    caption: GoogleFonts.roboto(
+      fontSize: 12.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 0.4,
+      color: Colors.white,
+    ),
+    overline: GoogleFonts.roboto(
+      fontSize: 10.0,
+      fontWeight: FontWeight.w400,
+      letterSpacing: 1.5,
       color: Colors.white,
     ),
   );
