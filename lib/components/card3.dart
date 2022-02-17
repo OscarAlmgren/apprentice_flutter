@@ -48,7 +48,7 @@ class Card3 extends StatelessWidget {
                   ),
                   Text(
                     'Recipe Trends',
-                    style: FooderlichTheme.darkTextTheme.headline2,
+                    style: FooderlichTheme.darkTextTheme.headline4,
                   ),
                   const SizedBox(
                     height: 30,

@@ -21,20 +21,20 @@ class FooderlichTheme {
       letterSpacing: 0,
       color: Colors.black,
     ),
-    headline4: GoogleFonts.robotoCondensed(
+    headline4: GoogleFonts.shrikhand(
       fontSize: 34.0,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.25,
       color: Colors.black,
     ),
-    headline5: GoogleFonts.robotoCondensed(
-      fontSize: 10.0,
+    headline5: GoogleFonts.shrikhand(
+      fontSize: 24.0,
       fontWeight: FontWeight.w400,
       letterSpacing: 0,
       color: Colors.black,
     ),
-    headline6: GoogleFonts.robotoCondensed(
-      fontSize: 24.0,
+    headline6: GoogleFonts.shrikhand(
+      fontSize: 20.0,
       fontWeight: FontWeight.w400,
       letterSpacing: 0,
       color: Colors.black,
@@ -102,20 +102,20 @@ class FooderlichTheme {
       letterSpacing: 0,
       color: Colors.white,
     ),
-    headline4: GoogleFonts.robotoCondensed(
+    headline4: GoogleFonts.shrikhand(
       fontSize: 34.0,
       fontWeight: FontWeight.w400,
       letterSpacing: 0.25,
       color: Colors.white,
     ),
-    headline5: GoogleFonts.robotoCondensed(
-      fontSize: 10.0,
+    headline5: GoogleFonts.shrikhand(
+      fontSize: 24.0,
       fontWeight: FontWeight.w400,
       letterSpacing: 0,
       color: Colors.white,
     ),
-    headline6: GoogleFonts.robotoCondensed(
-      fontSize: 24.0,
+    headline6: GoogleFonts.shrikhand(
+      fontSize: 20.0,
       fontWeight: FontWeight.w400,
       letterSpacing: 0,
       color: Colors.white,

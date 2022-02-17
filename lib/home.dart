@@ -1,3 +1,5 @@
+import 'package:apprentice_flutter/fooderlich_theme.dart';
+
 import 'screens/recipes_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/explore_screen.dart';
@@ -32,8 +34,8 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'Fooderlich home.dart',
-            style: Theme.of(context).textTheme.headline4,
+            'Fooderlich',
+            style: FooderlichTheme.darkTextTheme.headline3,
           ),
         ),
         body: pages[_selectedNavigationIndex],
