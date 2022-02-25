@@ -1,5 +1,6 @@
 import 'package:apprentice_flutter/fooderlich_theme.dart';
 
+import 'screens/grocery_screen.dart';
 import 'screens/recipes_screen.dart';
 import 'package:flutter/material.dart';
 import 'screens/explore_screen.dart';
@@ -17,9 +18,7 @@ class _HomeState extends State<Home> {
   static List<Widget> pages = <Widget>[
     const ExploreScreen(),
     RecipesScreen(),
-    Container(
-      color: Colors.cyan,
-    ),
+    const GroceryScreen(),
   ];
 
   void _onItemTapped(int index) {
