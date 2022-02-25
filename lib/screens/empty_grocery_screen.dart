@@ -1,5 +1,7 @@
-import 'package:apprentice_flutter/fooderlich_theme.dart';
+import '../fooderlich_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import '../models/models.dart';
 
 class EmptyGroceryScreen extends StatelessWidget {
   const EmptyGroceryScreen({Key? key}) : super(key: key);
@@ -42,9 +44,8 @@ class EmptyGroceryScreen extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0),
               ),
-              onPressed: (() {
-                // go to recipes
-              }),
+              onPressed: (() => Provider.of<TabManager>(context, listen: false)
+                  .goToRecipes()),
             )
           ],
         ),
