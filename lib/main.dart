@@ -1,3 +1,4 @@
+import 'package:apprentice_flutter/models/grocery_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'models/models.dart';
@@ -21,7 +22,8 @@ class Fooderlich extends StatelessWidget {
       theme: theme,
       title: 'Fooderlich OA',
       home: MultiProvider(providers: [
-        ChangeNotifierProvider(create: (context) => TabManager())
+        ChangeNotifierProvider(create: (context) => TabManager()),
+        ChangeNotifierProvider(create: (context) => GroceryManager()),
       ], child: const Home()),
     );
   }
