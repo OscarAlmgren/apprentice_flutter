@@ -3,6 +3,7 @@ import 'empty_grocery_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'grocery_item_screen.dart';
+import 'grocery_list_screen.dart';
 
 class GroceryScreen extends StatelessWidget {
   const GroceryScreen({Key? key}) : super(key: key);
@@ -35,8 +36,7 @@ class GroceryScreen extends StatelessWidget {
     return Consumer<GroceryManager>(
       builder: (context, manager, child) {
         if (manager.groceryItems.isNotEmpty) {
-          // add grocery list screen
-          return Container(color: Colors.red);
+          return GroceryListScreen(manager: manager);
         } else {
           return const EmptyGroceryScreen();
         }
