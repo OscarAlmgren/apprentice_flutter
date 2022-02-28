@@ -5,6 +5,7 @@ import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 import '../models/models.dart';
+import '../components/grocery_tile.dart';
 
 class GroceryItemScreen extends StatefulWidget {
   // 1
@@ -86,7 +87,36 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
       body: Container(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
-          children: [buildNameField(), buildImportanceField()],
+          children: [
+            buildNameField(),
+            const SizedBox(height: 10.0),
+            buildImportanceField(),
+            const SizedBox(height: 10.0),
+            buildDateField(context),
+            const SizedBox(height: 10.0),
+            buildTimeField(context),
+            const SizedBox(height: 10.0),
+            buildColorPicker(context),
+            const SizedBox(height: 10.0),
+            buildQuantityField(),
+            const SizedBox(height: 10.0),
+            GroceryTile(
+              item: GroceryItem(
+                id: 'previewMode',
+                name: _name,
+                importance: _importance,
+                color: _currentColor,
+                quantity: _currentSliderValue,
+                date: DateTime(
+                  _dueDate.year,
+                  _dueDate.month,
+                  _dueDate.day,
+                  _timeOfDay.hour,
+                  _timeOfDay.minute,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -173,12 +203,179 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
     );
   }
 
-  // TODO: ADD buildDateField()
+  Widget buildDateField(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Date',
+              style: Theme.of(context).textTheme.bodyText1,
+            ),
+            TextButton(
+              onPressed: () async {
+                final currentDate = DateTime.now();
+                final selectedDate = await showDatePicker(
+                  context: context,
+                  initialDate: currentDate,
+                  firstDate: currentDate,
+                  lastDate: DateTime(currentDate.year + 5),
+                );
+                setState(() {
+                  if (selectedDate != null) {
+                    _dueDate = selectedDate;
+                  }
+                });
+              },
+              child: const Text(
+                'Date',
+              ),
+            )
+          ],
+        ),
+        Text('${DateFormat('yyyy-MM-dd').format(_dueDate)}'),
+      ],
+    );
+  }
 
-  // TODO: Add buildTimeField()
+  Widget buildTimeField(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Time of Day',
+              style: GoogleFonts.lato(fontSize: 28.0),
+            ),
+            TextButton(
+              child: const Text('Select'),
+              onPressed: () async {
+                // 1
+                final timeOfDay = await showTimePicker(
+                  // 2
+                  initialTime: TimeOfDay.now(),
+                  context: context,
+                );
 
-  // TODO: Add buildColorPicker()
+                // 3
+                setState(() {
+                  if (timeOfDay != null) {
+                    _timeOfDay = timeOfDay;
+                  }
+                });
+              },
+            ),
+          ],
+        ),
+        Text(_timeOfDay.format(context)),
+      ],
+    );
+  }
 
-  // TODO: Add buildQuantityField()
+  Widget buildColorPicker(BuildContext context) {
+    // 1
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        // 2
+        Row(
+          children: [
+            Container(
+              height: 50.0,
+              width: 10.0,
+              color: _currentColor,
+            ),
+            const SizedBox(width: 8.0),
+            Text(
+              'Color',
+              style: GoogleFonts.lato(fontSize: 28.0),
+            ),
+          ],
+        ),
+        // 3
+        TextButton(
+          child: const Text('Select'),
+          onPressed: () {
+            // 4
+            showDialog(
+              context: context,
+              builder: (context) {
+                // 5
+                return AlertDialog(
+                  content: BlockPicker(
+                    pickerColor: Colors.white,
+                    // 6
+                    onColorChanged: (color) {
+                      setState(() => _currentColor = color);
+                    },
+                  ),
+                  actions: [
+                    // 7
+                    TextButton(
+                      child: const Text('Save'),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                    ),
+                  ],
+                );
+              },
+            );
+          },
+        ),
+      ],
+    );
+  }
 
+  Widget buildQuantityField() {
+    // 1
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // 2
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          textBaseline: TextBaseline.alphabetic,
+          children: [
+            Text(
+              'Quantity',
+              style: GoogleFonts.lato(fontSize: 28.0),
+            ),
+            const SizedBox(width: 16.0),
+            Text(
+              _currentSliderValue.toInt().toString(),
+              style: GoogleFonts.lato(fontSize: 18.0),
+            ),
+          ],
+        ),
+        // 3
+        Slider(
+          // 4
+          inactiveColor: _currentColor.withOpacity(0.5),
+          activeColor: _currentColor,
+          // 5
+          value: _currentSliderValue.toDouble(),
+          // 6
+          min: 0.0,
+          max: 100.0,
+          // 7
+          divisions: 100,
+          // 8
+          label: _currentSliderValue.toInt().toString(),
+          // 9
+          onChanged: (double value) {
+            setState(
+              () {
+                _currentSliderValue = value.toInt();
+              },
+            );
+          },
+        ),
+      ],
+    );
+  }
 }
