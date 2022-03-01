@@ -33,7 +33,10 @@ class _HomeState extends State<Home> {
                 style: FooderlichTheme.darkTextTheme.headline3,
               ),
             ),
-            body: pages[tabManager.selectedTab],
+            body: IndexedStack(
+              index: tabManager.selectedTab,
+              children: pages,
+            ),
             bottomNavigationBar: BottomNavigationBar(
               currentIndex: tabManager.selectedTab,
               onTap: (index) {
