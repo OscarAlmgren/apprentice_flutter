@@ -1,5 +1,6 @@
 import 'package:apprentice_flutter/components/grocery_tile.dart';
 import 'package:apprentice_flutter/models/grocery_manager.dart';
+import 'package:apprentice_flutter/screens/grocery_item_screen.dart';
 import 'package:flutter/material.dart';
 
 class GroceryListScreen extends StatelessWidget {
@@ -16,15 +17,52 @@ class GroceryListScreen extends StatelessWidget {
       child: ListView.separated(
           itemBuilder: (context, index) {
             final item = groceryItems[index];
-            // todo 27, 28
-            return GroceryTile(
+            return Dismissible(
               key: Key(item.id),
-              item: item,
-              onComplete: (change) {
-                if (change != null) {
-                  manager.completeItem(index, change);
-                }
+              direction: DismissDirection.endToStart,
+              background: Container(
+                color: Colors.red,
+                alignment: Alignment.centerRight,
+                child: const Icon(
+                  Icons.delete_forever,
+                  color: Colors.white,
+                  size: 50,
+                ),
+              ),
+              onDismissed: (direction) {
+                manager.deleteItem(index);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('${item.name} dismissed'),
+                  ),
+                );
               },
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => GroceryItemScreen(
+                        originalItem: item,
+                        onCreate: (item) {},
+                        onUpdate: (item) {
+                          manager.updateItem(item, index);
+                          Navigator.pop(context);
+                        },
+                      ),
+                    ),
+                  );
+                },
+                child: GroceryTile(
+                  key: Key(item.id),
+                  item: item,
+                  onComplete: (change) {
+                    if (change != null) {
+                      manager.completeItem(index, change);
+                    }
+                  },
+                ),
+              ),
             );
           },
           separatorBuilder: (context, index) => const SizedBox(height: 16.0),
