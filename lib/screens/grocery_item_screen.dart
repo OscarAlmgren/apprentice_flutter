@@ -8,13 +8,9 @@ import '../models/models.dart';
 import '../components/grocery_tile.dart';
 
 class GroceryItemScreen extends StatefulWidget {
-  // 1
   final Function(GroceryItem) onCreate;
-  // 2
   final Function(GroceryItem) onUpdate;
-  // 3
   final GroceryItem? originalItem;
-  // 4
   final bool isUpdating;
 
   const GroceryItemScreen({
@@ -69,7 +65,6 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO 12: Add GroceryItemScreen Scaffold
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -275,14 +270,10 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
             TextButton(
               child: const Text('Select'),
               onPressed: () async {
-                // 1
                 final timeOfDay = await showTimePicker(
-                  // 2
                   initialTime: TimeOfDay.now(),
                   context: context,
                 );
-
-                // 3
                 setState(() {
                   if (timeOfDay != null) {
                     _timeOfDay = timeOfDay;
@@ -298,11 +289,9 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
   }
 
   Widget buildColorPicker(BuildContext context) {
-    // 1
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        // 2
         Row(
           children: [
             Container(
@@ -317,25 +306,20 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
             ),
           ],
         ),
-        // 3
         TextButton(
           child: const Text('Select'),
           onPressed: () {
-            // 4
             showDialog(
               context: context,
               builder: (context) {
-                // 5
                 return AlertDialog(
                   content: BlockPicker(
                     pickerColor: Colors.white,
-                    // 6
                     onColorChanged: (color) {
                       setState(() => _currentColor = color);
                     },
                   ),
                   actions: [
-                    // 7
                     TextButton(
                       child: const Text('Save'),
                       onPressed: () {
@@ -353,11 +337,9 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
   }
 
   Widget buildQuantityField() {
-    // 1
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // 2
         Row(
           crossAxisAlignment: CrossAxisAlignment.baseline,
           textBaseline: TextBaseline.alphabetic,
@@ -373,27 +355,18 @@ class _GroceryItemScreenState extends State<GroceryItemScreen> {
             ),
           ],
         ),
-        // 3
         Slider(
-          // 4
           inactiveColor: _currentColor.withOpacity(0.5),
           activeColor: _currentColor,
-          // 5
           value: _currentSliderValue.toDouble(),
-          // 6
           min: 0.0,
           max: 100.0,
-          // 7
           divisions: 100,
-          // 8
           label: _currentSliderValue.toInt().toString(),
-          // 9
           onChanged: (double value) {
-            setState(
-              () {
-                _currentSliderValue = value.toInt();
-              },
-            );
+            setState(() {
+              _currentSliderValue = value.toInt();
+            });
           },
         ),
       ],
