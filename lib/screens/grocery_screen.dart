@@ -19,11 +19,12 @@ class GroceryScreen extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) => GroceryItemScreen(
-                  onCreate: (item) {
-                    manager.addItem(item);
-                    Navigator.pop(context);
-                  },
-                  onUpdate: (item) {}),
+                onCreate: (item) {
+                  manager.addItem(item);
+                  Navigator.pop(context);
+                },
+                onUpdate: (item) {},
+              ),
             ),
           );
         },
