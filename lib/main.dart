@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'models/models.dart';
 
 import 'fooderlich_theme.dart';
-import 'screens/home.dart';
 
 void main() {
   runApp(const Fooderlich());
@@ -21,6 +20,7 @@ class Fooderlich extends StatefulWidget {
 class _FooderlichState extends State<Fooderlich> {
   final _groceryManager = GroceryManager();
   final _profileManager = ProfileManager();
+  final _appStateManager = AppStateManager();
 
   @override // alla stateless widgets måste override:a build()
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class _FooderlichState extends State<Fooderlich> {
       providers: [
         ChangeNotifierProvider(create: (context) => _groceryManager),
         ChangeNotifierProvider(create: (context) => _profileManager),
-        // TODO: Add AppStateManager ChangeNotifierProvider
+        ChangeNotifierProvider(create: (context) => _appStateManager),
       ],
       child: Consumer<ProfileManager>(
         builder: (context, profileManager, child) {
