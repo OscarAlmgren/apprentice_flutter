@@ -2,10 +2,10 @@ import 'package:apprentice_flutter/fooderlich_theme.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
-import 'screens/grocery_screen.dart';
-import 'screens/recipes_screen.dart';
-import 'screens/explore_screen.dart';
-import 'models/models.dart';
+import 'grocery_screen.dart';
+import 'recipes_screen.dart';
+import 'explore_screen.dart';
+import '../models/models.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
