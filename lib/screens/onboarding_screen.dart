@@ -1,8 +1,17 @@
+import 'package:apprentice_flutter/models/app_state_manager.dart';
+import 'package:apprentice_flutter/models/fooderlich_pages.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnboardingScreen extends StatefulWidget {
-  // TODO: Add OnboardingScreen MaterialPage Helper
+  static MaterialPage page() {
+    return MaterialPage(
+      child: const OnboardingScreen(),
+      key: ValueKey(FooderlichPages.onboardingPath),
+      name: FooderlichPages.onboardingPath,
+    );
+  }
 
   const OnboardingScreen({Key? key}) : super(key: key);
 
@@ -24,6 +33,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         leading: GestureDetector(
           child: const Icon(
             Icons.chevron_left,
+            color: Colors.black,
             size: 35,
           ),
           onTap: () {
@@ -50,7 +60,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         MaterialButton(
           child: const Text('Skip'),
           onPressed: () {
-            // TODO: Onboarding -> Navigate to home
+            Provider.of<AppStateManager>(context, listen: false)
+                .completeOnboarding();
           },
         ),
       ],
