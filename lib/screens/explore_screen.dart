@@ -18,12 +18,12 @@ class _ExploreScreenState extends State<ExploreScreen> {
   void _scrollListerner() {
     if (_controller.offset >= _controller.position.maxScrollExtent &&
         !_controller.position.outOfRange) {
-      print('At the bottom!');
+      // print('At the bottom!');
     }
 
     if (_controller.offset <= _controller.position.minScrollExtent &&
         !_controller.position.outOfRange) {
-      print('At the top!');
+      // print('At the top!');
     }
   }
 
