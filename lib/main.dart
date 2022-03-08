@@ -1,5 +1,5 @@
 import 'package:apprentice_flutter/models/grocery_manager.dart';
-import 'package:apprentice_flutter/screens/screens.dart';
+import 'package:apprentice_flutter/navigation/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'models/models.dart';
@@ -21,6 +21,17 @@ class _FooderlichState extends State<Fooderlich> {
   final _groceryManager = GroceryManager();
   final _profileManager = ProfileManager();
   final _appStateManager = AppStateManager();
+  late AppRouter _appRouter;
+
+  @override
+  void initState() {
+    super.initState();
+    _appRouter = AppRouter(
+      appStateManager: _appStateManager,
+      groceryManager: _groceryManager,
+      profileManager: _profileManager,
+    );
+  }
 
   @override // alla stateless widgets måste override:a build()
   Widget build(BuildContext context) {
@@ -39,11 +50,13 @@ class _FooderlichState extends State<Fooderlich> {
             theme = FooderlichTheme.light();
           }
           return MaterialApp(
-            theme: theme,
-            title: 'Fooderlich',
-            // replace with router widget
-            home: const SplashScreen(),
-          );
+              theme: theme,
+              title: 'Fooderlich',
+              // replace with router widget
+              home: Router(
+                routerDelegate: _appRouter,
+                // TODO backbutton dispatch
+              ));
         },
       ),
     );
