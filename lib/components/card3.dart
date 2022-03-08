@@ -69,7 +69,7 @@ class Card3 extends StatelessWidget {
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                     onDeleted: () {
-                      print('delete');
+                      // print('delete');
                     },
                   ),
                   Chip(
@@ -79,7 +79,7 @@ class Card3 extends StatelessWidget {
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                     onDeleted: () {
-                      print('delete');
+                      // print('delete');
                     },
                   ),
                   Chip(
@@ -110,7 +110,7 @@ class Card3 extends StatelessWidget {
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                     onDeleted: () {
-                      print('delete');
+                      // print('delete');
                     },
                   ),
                   Chip(
