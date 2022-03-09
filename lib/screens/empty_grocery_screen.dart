@@ -44,8 +44,10 @@ class EmptyGroceryScreen extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0),
               ),
-              onPressed: (() => Provider.of<TabManager>(context, listen: false)
-                  .goToRecipes()),
+              onPressed: () {
+                Provider.of<AppStateManager>(context, listen: false)
+                    .goToRecipes();
+              },
             )
           ],
         ),
