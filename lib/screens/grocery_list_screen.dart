@@ -6,7 +6,10 @@ import 'package:flutter/material.dart';
 class GroceryListScreen extends StatelessWidget {
   final GroceryManager manager;
 
-  const GroceryListScreen({Key? key, required this.manager}) : super(key: key);
+  const GroceryListScreen({
+    Key? key,
+    required this.manager,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,19 +42,7 @@ class GroceryListScreen extends StatelessWidget {
               },
               child: InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => GroceryItemScreen(
-                        originalItem: item,
-                        onCreate: (item) {},
-                        onUpdate: (item) {
-                          manager.updateItem(item, index);
-                          Navigator.pop(context);
-                        },
-                      ),
-                    ),
-                  );
+                  manager.groceryItemTapped(index);
                 },
                 child: GroceryTile(
                   key: Key(item.id),
