@@ -1,10 +1,16 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import '../models/models.dart';
 
 class WebViewScreen extends StatefulWidget {
-  // TODO: WebViewScreen MaterialPage Helper
+  static MaterialPage page() {
+    return MaterialPage(
+      child: const WebViewScreen(),
+      key: ValueKey(FooderlichPages.raywenderlich),
+      name: FooderlichPages.raywenderlich,
+    );
+  }
 
   const WebViewScreen({Key? key}) : super(key: key);
 

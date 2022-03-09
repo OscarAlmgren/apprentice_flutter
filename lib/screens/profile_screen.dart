@@ -1,3 +1,4 @@
+import 'package:apprentice_flutter/models/fooderlich_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -5,13 +6,20 @@ import '../components/circle_image.dart';
 import '../models/models.dart';
 
 class ProfileScreen extends StatefulWidget {
-  // TODO: ProfileScreen MaterialPage Helper
-
   final User user;
+
   const ProfileScreen({
     Key? key,
     required this.user,
   }) : super(key: key);
+
+  static MaterialPage page(User user) {
+    return MaterialPage(
+      child: ProfileScreen(user: user),
+      key: ValueKey(FooderlichPages.profilePath),
+      name: FooderlichPages.profilePath,
+    );
+  }
 
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
@@ -23,9 +31,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.close),
+          icon: const Icon(
+            Icons.close,
+            color: Colors.black,
+          ),
           onPressed: () {
-            // TODO: Close Profile Screen
+            Provider.of<ProfileManager>(context, listen: false)
+                .tapOnProfile(false);
           },
         ),
       ),
@@ -51,13 +63,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ListTile(
           title: const Text('View raywenderlich.com'),
           onTap: () {
-            // TODO: Open raywenderlich.com webview
+            Provider.of<ProfileManager>(context, listen: false)
+                .tapOnRaywenderlich(true);
           },
         ),
         ListTile(
           title: const Text('Log out'),
           onTap: () {
-            // TODO: Logout user
+            Provider.of<ProfileManager>(context, listen: false)
+                .tapOnProfile(false);
+            Provider.of<AppStateManager>(context, listen: false).logout();
           },
         )
       ],
