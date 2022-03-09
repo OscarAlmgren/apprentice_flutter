@@ -45,6 +45,9 @@ class _HomeState extends State<Home> {
                 'Fooderlich',
                 style: FooderlichTheme.darkTextTheme.headline3,
               ),
+              actions: [
+                profileButton(),
+              ],
             ),
             body: IndexedStack(
               index: widget.currentTab,
@@ -76,6 +79,22 @@ class _HomeState extends State<Home> {
           ),
         );
       },
+    );
+  }
+
+  Widget profileButton() {
+    return Padding(
+      padding: const EdgeInsets.only(right: 16.0),
+      child: GestureDetector(
+        onTap: () {
+          Provider.of<ProfileManager>(context, listen: false)
+              .tapOnProfile(true);
+        },
+        child: const CircleAvatar(
+          backgroundColor: Colors.transparent,
+          backgroundImage: AssetImage('assets/profile_pics/person_stef.jpeg'),
+        ),
+      ),
     );
   }
 }
