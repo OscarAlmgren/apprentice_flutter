@@ -1,6 +1,5 @@
 import 'package:apprentice_flutter/components/grocery_tile.dart';
 import 'package:apprentice_flutter/models/grocery_manager.dart';
-import 'package:apprentice_flutter/screens/grocery_item_screen.dart';
 import 'package:flutter/material.dart';
 
 class GroceryListScreen extends StatelessWidget {

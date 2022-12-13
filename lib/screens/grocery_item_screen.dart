@@ -1,5 +1,4 @@
 import 'package:apprentice_flutter/fooderlich_theme.dart';
-import 'package:apprentice_flutter/models/fooderlich_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';

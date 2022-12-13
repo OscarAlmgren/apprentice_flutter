@@ -34,12 +34,6 @@ class EmptyGroceryScreen extends StatelessWidget {
               style: Theme.of(context).textTheme.bodyText1,
             ),
             MaterialButton(
-              child: Text(
-                'Browse recipes',
-                style: FooderlichTheme.darkTextTheme.bodyText1,
-              ),
-
-              // textColor: FooderlichTheme.darkTextTheme.headline6?.color,
               color: Colors.green,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12.0),
@@ -48,6 +42,10 @@ class EmptyGroceryScreen extends StatelessWidget {
                 Provider.of<AppStateManager>(context, listen: false)
                     .goToRecipes();
               },
+              child: Text(
+                'Browse recipes',
+                style: FooderlichTheme.darkTextTheme.bodyText1,
+              ),
             )
           ],
         ),

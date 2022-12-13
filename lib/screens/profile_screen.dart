@@ -1,4 +1,3 @@
-import 'package:apprentice_flutter/models/fooderlich_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

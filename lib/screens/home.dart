@@ -2,7 +2,6 @@ import 'package:apprentice_flutter/fooderlich_theme.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
-import '../models/fooderlich_pages.dart';
 import 'grocery_screen.dart';
 import 'recipes_screen.dart';
 import 'explore_screen.dart';
