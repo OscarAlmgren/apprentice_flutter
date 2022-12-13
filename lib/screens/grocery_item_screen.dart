@@ -41,10 +41,10 @@ class GroceryItemScreen extends StatefulWidget {
         super(key: key);
 
   @override
-  _GroceryItemScreenState createState() => _GroceryItemScreenState();
+  GroceryItemScreenState createState() => GroceryItemScreenState();
 }
 
-class _GroceryItemScreenState extends State<GroceryItemScreen> {
+class GroceryItemScreenState extends State<GroceryItemScreen> {
   final _nameController = TextEditingController();
   String _name = '';
   Importance _importance = Importance.low;

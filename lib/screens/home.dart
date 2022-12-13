@@ -23,10 +23,10 @@ class Home extends StatefulWidget {
   const Home({Key? key, required this.currentTab}) : super(key: key);
 
   @override
-  _HomeState createState() => _HomeState();
+  HomeState createState() => HomeState();
 }
 
-class _HomeState extends State<Home> {
+class HomeState extends State<Home> {
   static List<Widget> pages = <Widget>[
     const ExploreScreen(),
     RecipesScreen(),
