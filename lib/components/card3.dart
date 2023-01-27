@@ -48,7 +48,7 @@ class Card3 extends StatelessWidget {
                   ),
                   Text(
                     'Recipe Trends',
-                    style: FooderlichTheme.darkTextTheme.headline4,
+                    style: FooderlichTheme.darkTextTheme.headlineMedium,
                   ),
                   const SizedBox(
                     height: 30,
@@ -65,7 +65,7 @@ class Card3 extends StatelessWidget {
                   Chip(
                     label: Text(
                       'Healthy',
-                      style: FooderlichTheme.darkTextTheme.bodyText1,
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                     onDeleted: () {
@@ -75,7 +75,7 @@ class Card3 extends StatelessWidget {
                   Chip(
                     label: Text(
                       'Vegan',
-                      style: FooderlichTheme.darkTextTheme.bodyText1,
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                     onDeleted: () {
@@ -85,28 +85,28 @@ class Card3 extends StatelessWidget {
                   Chip(
                     label: Text(
                       'Carrots',
-                      style: FooderlichTheme.darkTextTheme.bodyText1,
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Greens',
-                      style: FooderlichTheme.darkTextTheme.bodyText1,
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Wheat',
-                      style: FooderlichTheme.darkTextTheme.bodyText1,
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   ),
                   Chip(
                     label: Text(
                       'Fish',
-                      style: FooderlichTheme.darkTextTheme.bodyText1,
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                     onDeleted: () {
@@ -116,7 +116,7 @@ class Card3 extends StatelessWidget {
                   Chip(
                     label: Text(
                       'Mint',
-                      style: FooderlichTheme.darkTextTheme.bodyText1,
+                      style: FooderlichTheme.darkTextTheme.bodyLarge,
                     ),
                     backgroundColor: Colors.black.withOpacity(0.7),
                   )

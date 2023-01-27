@@ -1,6 +1,4 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 import '../models/models.dart';
 
 class WebViewScreen extends StatefulWidget {
@@ -23,7 +21,7 @@ class WebViewScreenState extends State<WebViewScreen> {
   void initState() {
     super.initState();
     // Enable hybrid composition.
-    if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
+    // if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
   }
 
   @override
@@ -31,9 +29,6 @@ class WebViewScreenState extends State<WebViewScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('raywenderlich.com'),
-      ),
-      body: const WebView(
-        initialUrl: 'https://www.raywenderlich.com/',
       ),
     );
   }

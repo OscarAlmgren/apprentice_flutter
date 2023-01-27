@@ -27,11 +27,11 @@ class FriendPostTile extends StatelessWidget {
           children: [
             Text(
               post.comment,
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
             Text(
               '${post.timestamp} mins ago.',
-              style: Theme.of(context).textTheme.subtitle2,
+              style: Theme.of(context).textTheme.titleSmall,
             ),
           ],
         ))

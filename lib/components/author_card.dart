@@ -35,11 +35,11 @@ class AuthorCard extends StatelessWidget {
                 children: [
                   Text(
                     authorName,
-                    style: FooderlichTheme.lightTextTheme.button,
+                    style: FooderlichTheme.lightTextTheme.labelLarge,
                   ),
                   Text(
                     title,
-                    style: FooderlichTheme.lightTextTheme.bodyText2,
+                    style: FooderlichTheme.lightTextTheme.bodyMedium,
                   )
                 ],
               ),

@@ -116,7 +116,7 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
         elevation: 0.0,
         title: Text(
           'Grocery Item',
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
       body: Container(
@@ -163,7 +163,7 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
       children: [
         Text(
           'Item name',
-          style: Theme.of(context).textTheme.bodyText1,
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
         TextField(
           controller: _nameController,
@@ -191,7 +191,7 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
       children: [
         Text(
           'Importance',
-          style: Theme.of(context).textTheme.headline5,
+          style: Theme.of(context).textTheme.headlineSmall,
         ),
         const SizedBox(
           height: 10.0,
@@ -203,7 +203,7 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
               selectedColor: Colors.black,
               label: Text(
                 'low',
-                style: FooderlichTheme.darkTextTheme.bodyText1,
+                style: FooderlichTheme.darkTextTheme.bodyLarge,
               ),
               selected: _importance == Importance.low,
               onSelected: (selected) => setState(() {
@@ -214,7 +214,7 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
               selectedColor: Colors.black,
               label: Text(
                 'medium',
-                style: FooderlichTheme.darkTextTheme.bodyText1,
+                style: FooderlichTheme.darkTextTheme.bodyLarge,
               ),
               selected: _importance == Importance.medium,
               onSelected: (selected) => setState(() {
@@ -225,7 +225,7 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
               selectedColor: Colors.black,
               label: Text(
                 'high',
-                style: FooderlichTheme.darkTextTheme.bodyText1,
+                style: FooderlichTheme.darkTextTheme.bodyLarge,
               ),
               selected: _importance == Importance.high,
               onSelected: (selected) => setState(() {
@@ -247,7 +247,7 @@ class GroceryItemScreenState extends State<GroceryItemScreen> {
           children: [
             Text(
               'Date',
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
             TextButton(
               onPressed: () async {

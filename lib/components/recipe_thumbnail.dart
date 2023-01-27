@@ -24,12 +24,12 @@ class RecipeThumbnail extends StatelessWidget {
           ),
           Text(
             recipe.title,
-            style: Theme.of(context).textTheme.bodyText1,
+            style: Theme.of(context).textTheme.bodyLarge,
             maxLines: 1,
           ),
           Text(
             recipe.duration,
-            style: Theme.of(context).textTheme.bodyText2,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ],
       ),

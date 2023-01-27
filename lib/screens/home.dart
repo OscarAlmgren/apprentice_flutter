@@ -42,7 +42,7 @@ class HomeState extends State<Home> {
             appBar: AppBar(
               title: Text(
                 'Fooderlich',
-                style: FooderlichTheme.darkTextTheme.headline3,
+                style: FooderlichTheme.darkTextTheme.displaySmall,
               ),
               actions: [
                 profileButton(),

@@ -22,7 +22,7 @@ class EmptyGroceryScreen extends StatelessWidget {
             ),
             Text(
               'No Groceries',
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(
               height: 16.0,
@@ -31,7 +31,7 @@ class EmptyGroceryScreen extends StatelessWidget {
               'Shoppingg ingredients for?\n'
               'Tap the + button to write them down!',
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.bodyText1,
+              style: Theme.of(context).textTheme.bodyLarge,
             ),
             MaterialButton(
               color: Colors.green,
@@ -44,7 +44,7 @@ class EmptyGroceryScreen extends StatelessWidget {
               },
               child: Text(
                 'Browse recipes',
-                style: FooderlichTheme.darkTextTheme.bodyText1,
+                style: FooderlichTheme.darkTextTheme.bodyLarge,
               ),
             )
           ],

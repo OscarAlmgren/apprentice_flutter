@@ -42,7 +42,7 @@ class Card2 extends StatelessWidget {
                     right: 16,
                     child: Text(
                       'Recipe',
-                      style: FooderlichTheme.lightTextTheme.headline4,
+                      style: FooderlichTheme.lightTextTheme.headlineMedium,
                     ),
                   ),
                   Positioned(
@@ -52,7 +52,7 @@ class Card2 extends StatelessWidget {
                       quarterTurns: 3,
                       child: Text(
                         'Smoothies',
-                        style: FooderlichTheme.lightTextTheme.headline4,
+                        style: FooderlichTheme.lightTextTheme.headlineMedium,
                       ),
                     ),
                   ),
